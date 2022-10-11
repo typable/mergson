@@ -1,0 +1,283 @@
+{
+  "country": {
+    "placeholder": "Jazyk",
+    "germany": "Němec",
+    "denmark": "Dánština",
+    "unitedKingdom": "Angličtina",
+    "france": "Francouzština",
+    "netherlands": "Nizozemština",
+    "poland": "Polština",
+    "czechia": "Tschechisch",
+    "estonia":"Estnisch",
+    "spain": "Spanisch",
+    "finland": "Finnisch",
+    "croatia": "Kroatisch",
+    "italia": "Italienisch",
+    "lithuania": "Litauisch",
+    "latvia": "Lettisch",
+    "norway": "Norwegisch",
+    "romania": "Rumänisch",
+    "russia": "Russisch",
+    "slovenia":"Slowenisch",
+    "sweden": "Schwedisch",
+    "ukraine": "Ukrainisch"
+  },
+  "header": {
+    "app_name": "Cockpit prodejce",
+    "logout": "Odhlásit",
+    "main_nav": {
+      "overview": {
+        "label": "Přehled"
+      },
+      "customerList": {
+        "label": "Seznam zákazníků"
+      },
+      "requests": {
+        "label": "Správa zákazníků"
+      },
+      "customerRegistration": {
+        "label": "Registrace zákazníků"
+      },
+      "cmanagement": {
+        "label": "Správa zákazníků",
+        "sub_nav": {
+          "requests": "Obchodní poptávky",
+          "list": "Seznam zákazníků",
+          "registration": "Registrace zákazníků",
+          "registered": "Registrovaní zákazníci"
+        }
+      },
+      "sales": {
+        "label": "Doklady"
+      },
+      "settings": {
+        "label": "Nastavení",
+        "sub_nav": {
+          "general": "Obecně",
+          "partsshop": "Parts obchod",
+          "discounts": "Tabulka slev"
+        }
+      }
+    },
+     "workaSelector": {
+      "changeBtn": "Ändern"
+    }
+  },
+  "content": {
+    "cmanagement": {
+      "register": {
+        "heading": "Registrace",
+        "text_one_star": "* tyto údaje jsou povinné",
+        "text_two_stars": "** Souhlasem (autorizací) zákazníka potvrzujete, že jste akceptoval/a a podepsal/a dohody prodejce o využívání on-line platformy \"CLAAS Parts Shop\". Toto je nezbytná dohoda mezi společností CLAAS a odbytovým partnerem. Pokud jste to ještě neudělal/a, vyžádejte si prosím dohodu na e-mailové adrese partsshop@claas.com a zašlete ji zpět podepsanou na výše uvedenou e-mailovou adresu. Děkujeme Vám!",
+        "text_three_stars": "*** Jakmile autorizujete prvního zákazníka pro FARM PARTS Shop, bude Vám pro Vaši lokalitu účtován paušál za využívání 19,90 €/měsíc. Poté můžete pro Vaši lokalitu bezplatně autorizovat libovolné množství zákazníků. Fakturace probíhá 1x ročně, poprvé v následujícím měsíci po autorizaci prvního zákazníka. Fakturace probíhá prostřednictvím Granit."
+      },
+      "customerList": {
+        "heading": "Přehled zákazníků",
+        "tableHeader": {
+          "firstName": "Křestní jméno",
+          "lastName": "Příjmení",
+          "fullAddress": "Adresa",
+          "fullCity": "PSČ/město",
+          "fullName": "Jméno",
+          "companyName": "Název firmy",
+          "adress": "Adresa",
+          "plz": "PSČ/město",
+          "email": "E-mail",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts obchod",
+          "FARMPARTS": "FARM PARTS Shop",
+          "ACADEMY": "Academy",
+          "SMP": "License Shop",
+          "edit": "Upravit"
+        }
+      },
+      "requests": {
+        "heading": "Nevyřízené obchodní poptávky"
+      },
+      "registeredCustomers": {
+        "heading": "Přehled registrací",
+        "tableHeader": {
+          "email": "E-mail",
+          "firstname": "Křestní jméno",
+          "lastname": "Příjmení",
+          "fullName":"Jméno",
+          "company":"Název firmy",
+          "plz":"PSČ/město",
+          "adress":"Adresa",
+          "status": "Stav",
+          "mailSentDate": "Datum odeslání",
+          "allowEmailSend": "Registrační e-mail",
+          "allowDeletion": "Smazat"
+        }
+      },
+      "customerDetails": {
+        "customerData": {
+          "heading": "Osobní údaje"
+        },
+        "shopDetails": {
+          "heading": "Shopy / Aplikace",
+          "description": "Zde najdete přehled shopů dostupných pro zákazníky a jejich stav.",
+          "description2": "Zde můžete také editovat nastavení zákazníků pro Parts Shop.",
+          "notice": "Upozornění: Pro FARM PARTS přejděte prosím do Správy zákazníků v partnerském shopu FARM PARTS.",
+          "state_active": "aktiv",
+          "state_not_active": "nicht aktiv",
+          "state_request": "angefragt",
+          "state_locked": "gesperrt"
+        }
+      }
+    },
+    "settings": {
+      "general": {
+        "headings": {
+          "contactData": {
+            "label": "Kontaktní údaje",
+            "description": "Údaje pocházejí ze systému CLAAS SAP a mohou být změněny pouze firmou CLAAS:"
+          },
+          "contacts": {
+            "label": "Kontaktní partneři",
+            "description": "Následující kontaktní partneři jsou automaticky informováni e-mailem. Požadujete-li navíc informování prostřednictvím SMS, napište prosím do sloupce Číslo mobilu příslušné číslo mobilního telefonu."
+          }
+        },
+        "propertyLabels": {
+          "fullName": "Jméno",
+          "street": "Ulice, číslo domu",
+          "locale": "PSČ, místo",
+          "telephone": "Telefon",
+          "fax": "Fax"
+        },
+        "tableHeader": {
+          "active": "Aktivní",
+          "firstName": "Křestní jméno",
+          "lastName": "Příjmení",
+          "telephone": "Číslo mobilního telefonu",
+          "city": "Město",
+          "street": "Ulice",
+          "zipCode": "PSČ",
+          "email": "E-mail",
+          "telefax": "Fax",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts obchod",
+          "FARMPARTS": "FARM PARTS Shop",
+          "ACADEMY": "Academy",
+          "SMP": "License Shop",
+          "sms": ""
+        },
+        "messageNoActiveShop": "Tento kontaktní partner má aktivní shop."
+      },
+      "partsShop": {
+        "tableHeader" : {
+          "id": "ID lokality",
+          "description": "Popis",
+          "branchText": "Pobočka",
+          "delete": "Odstranění lokality"
+        }
+      }
+    },
+    "sales":{
+      "sort": "Sortierung",
+      "sortValues": {
+        "noSort": "Keine",
+        "open": "Nezpracováno",
+        "process": "Ve zpracování",
+        "closed": "Uzavřeno"
+      },
+      "orders": {
+        "heading" : "Doklady",
+        "description": {
+          "begin": "Podrobnosti k zakázce",
+          "end": "Vyvolání ‒ stav"
+        },
+        "details": {
+          "properties": {
+            "statebutton": "Změna stavu",
+            "deliverer": "Příjemce zboží",
+            "date": "Datum",
+            "deliverytype": "Druh odeslání",
+            "pickupstation": "Abholstation",
+            "receiver": "Příjemce objednávka",
+            "messageForDealer": "Zpráva prodejci"
+          },
+          "positions":{
+            "downloadbutton": "Stáhnout doklad"
+          }
+        }
+      },
+      "discounts": {
+        "heading": "Tabulka slev",
+        "customerGroup": "Skupina zákazníků",
+        "description": {
+          "paragraph_1": {
+            "row_1": "Zde veďte slevy jednotlivých skupin zákazníků nebo zakládejte nové skupiny zákazníků.",
+            "row_2": "Kladné hodnoty představují příplatek, záporné (zadání se znaménkem -) slevu"
+          },
+          "paragraph_2": {
+            "row_1": "V polích RG (skupina slevy) 1 ‒ 12 můžete vést příslušné slevy pro díly mimo LU.",
+            "row_2": "V posledním sloupci \"Díly LU\" můžete pro skupiny zákazníků subdodavatelů \"LU 1\", \"LU 2\", \"LU 3\" uvádět pro díly LU samostatné slevy."
+          },
+          "notice": {
+            "row_1": "Upozornění: Máte-li propojení na Váš systém hospodaření se zbožím (zobrazování cen a dostupnosti),",
+            "row_2": "nemá pro Vás tato tabulka slev žádný význam."
+          }
+        }
+      }
+    },
+    "imprint": {
+        "comm_register": "Obchodní rejstřík",
+        "contact": "Kontakt",
+        "directors": "Vedení podniku",
+        "email": "E-mail",
+        "internet": "Internet",
+        "phone": "Telefonní centrála",
+        "title": "Impressum"
+    }
+  },
+  "dialog": {
+      "accept": "Ano",
+      "deny": "Ne",
+      "cancel": "Ukončit",
+      "confirmMessage" :"Alle nicht gespeicherten Änderungen gehen verloren wollen Sie wirklich schließen?",
+    "workarea": {
+      "title": "Výběr lokality"
+    },
+    "addressValidation": {
+      "suggested": "Návrhy adresy:",
+      "original": "Zadaná adresa:",
+      "accept": "Převzít",
+      "deny": "Zavřít",
+      "title": "Meinten Sie vielleicht:"
+    },
+    "registeredCustomers": {
+      "deleteCustomerConfirm": "Kunde wirklich löschen?"
+    },
+    "contactSettings": {
+      "description": "Die Nummer bitte ohne führende 0 und mit der entsprechenden Ländervorwahl eintragen: Format:",
+      "title": "SMS Benachrichtigung"
+    }
+  },
+  "buttons": {
+    "submit": "Poslat",
+    "accept": "Udělit schválení shopu",
+    "deny": "Odmítnout schválení shopu",
+    "deleteCustomer": "Smazat zákaznický účet",
+    "shopRequest": "Udělit schválení shopu",
+    "cancelShop": "Odebrat schválení shopu",
+    "notActive": "Neaktivní",
+    "closeWindow": "Zavřít okno",
+    "save": "Uložit",
+    "close": "Zavřít"
+  },
+  "formular": {
+    "error": {
+       "required": "Toto je povinné pole",
+       "email": "Musí to být e-mail"
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz"
+  },
+  "table": {
+    "search": "Suche"
+  }
+}

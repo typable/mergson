@@ -1,0 +1,283 @@
+{
+  "country": {
+    "placeholder": "Language",
+    "germany": "German",
+    "denmark": "Danish",
+    "unitedKingdom": "English",
+    "france": "French",
+    "netherlands": "Dutch",
+    "poland": "Polish",
+    "czechia": "Tschechisch",
+    "estonia":"Estnisch",
+    "spain": "Spanisch",
+    "finland": "Finnisch",
+    "croatia": "Kroatisch",
+    "italia": "Italienisch",
+    "lithuania": "Litauisch",
+    "latvia": "Lettisch",
+    "norway": "Norwegisch",
+    "romania": "Rumänisch",
+    "russia": "Russisch",
+    "slovenia":"Slowenisch",
+    "sweden": "Schwedisch",
+    "ukraine": "Ukrainisch"
+  },
+  "header": {
+    "app_name": "Dealer Cockpit",
+    "logout": "Log off",
+    "main_nav": {
+      "overview": {
+        "label": "Overview"
+      },
+      "customerList": {
+        "label": "Customer list"
+      },
+      "requests": {
+        "label": "Customer management"
+      },
+      "customerRegistration": {
+        "label": "Customer registration"
+      },
+      "cmanagement": {
+        "label": "Customer management",
+        "sub_nav": {
+          "requests": "Business enquiries",
+          "list": "Customer list",
+          "registration": "Customer registration",
+          "registered": "Registered customers"
+        }
+      },
+      "sales": {
+        "label": "Documents"
+      },
+      "settings": {
+        "label": "Settings",
+        "sub_nav": {
+          "general": "General",
+          "partsshop": "Parts Shop",
+          "discounts": "Discount table"
+        }
+      }
+    },
+    "workaSelector": {
+      "changeBtn": "Ändern"
+    }
+  },
+  "content": {
+    "cmanagement": {
+      "register": {
+        "heading": "Registration",
+        "text_one_star": "* This information is a mandatory field",
+        "text_two_stars": "By accepting (authorising) a customer, you confirm that you have accepted and signed the distributor agreement for use of the \"CLAAS Parts Shop\" online platform. This is a required agreement between CLAAS and the sales partner. If you have not yet done this, please request the agreement at partsshop@claas.com, sign it and send it back to the aforementioned e-mail address. Thank you!",
+        "text_three_stars": "*** As soon as you have authorised the first customer for the FARM PARTS Shop, you will be charged a flat-rate usage fee of €19.90/month for your location. You can then authorise as many customers as you want for you location free of charge. Invoicing occurs 1x per year, for the first time in the month following the authorisation of the first customer. Invoicing occurs via Granit."
+      },
+      "customerList": {
+        "heading": "Customer overview",
+        "tableHeader": {
+          "firstName": "First name",
+          "lastName": "Surname",
+          "fullAddress": "Address",
+          "fullCity": "Post code/town",
+          "fullName": "Name",
+          "companyName": "Company name",
+          "adress": "Address",
+          "plz": "Post code/town",
+          "email": "Email",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts Shop",
+          "FARMPARTS": "FARM PARTS Shop",
+          "ACADEMY": "Academy",
+          "SMP": "License Shop",
+          "edit": "Edit"
+        }
+      },
+      "requests": {
+        "heading": "Open business enquiries"
+      },
+      "registeredCustomers": {
+        "heading": "Overview of registrations",
+        "tableHeader": {
+          "email": "Email",
+          "firstname": "First name",
+          "lastname": "Surname",
+          "fullName":"Name",
+          "company":"Company name",
+          "plz":"Post code/town",
+          "adress":"Address",
+          "status": "Status",
+          "mailSentDate": "Sent date",
+          "allowEmailSend": "Registration e-mail",
+          "allowDeletion": "Delete"
+        }
+      },
+      "customerDetails": {
+        "customerData": {
+          "heading": "Personal data"
+        },
+        "shopDetails": {
+          "heading": "Shops/applications",
+          "description": "This is where you can find an overview of the shops available to customers and their status.",
+          "description2": "You can also edit the customer settings for the Parts Shop here.",
+          "notice": "Note: For FARM PARTS, please change to the customer management in the FARM PARTS Partner Shop.",
+          "state_active": "aktiv",
+          "state_not_active": "nicht aktiv",
+          "state_request": "angefragt",
+          "state_locked": "gesperrt"
+        }
+      }
+    },
+    "settings": {
+      "general": {
+        "headings": {
+          "contactData": {
+            "label": "Contact data",
+            "description": "The data comes from the CLAAS SAP system and can only be changed by CLAAS:"
+          },
+          "contacts": {
+            "label": "Contact",
+            "description": "The following contact partners are automatically notified by e-mail. If additional notification by text message is desired, please enter the relevant mobile phone number in the column for mobile number."
+          }
+        },
+        "propertyLabels": {
+          "fullName": "Name",
+          "street": "Street, building number",
+          "locale": "Postcode, city",
+          "telephone": "Telephone",
+          "fax": "Fax"
+        },
+        "tableHeader": {
+          "active": "Active",
+          "firstName": "First name",
+          "lastName": "Surname",
+          "telephone": "Mobile number",
+          "city": "City",
+          "street": "Street",
+          "zipCode": "Postal code",
+          "email": "Email",
+          "telefax": "Fax",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts Shop",
+          "FARMPARTS": "FARM PARTS Shop",
+          "ACADEMY": "Academy",
+          "SMP": "License Shop",
+          "sms": ""
+        },
+        "messageNoActiveShop": "This contact partner has no active shop."
+      },
+      "partsShop": {
+        "tableHeader" : {
+          "id": "Location ID",
+          "description": "Description",
+          "branchText": "Branch",
+          "delete": "Remove location"
+        }
+      }
+    },
+    "sales":{
+      "sort": "Sortierung",
+      "sortValues": {
+        "noSort": "Keine",
+        "open": "Unedited",
+        "process": "In process",
+        "closed": "Finished"
+      },
+      "orders": {
+        "heading" : "Documents",
+        "description": {
+          "begin": "Details of task",
+          "end": "Open – Status"
+        },
+        "details": {
+          "properties": {
+            "statebutton": "Change status",
+            "deliverer": "Goods recipient",
+            "date": "Date",
+            "deliverytype": "Shipping type",
+            "pickupstation": "Abholstation",
+            "receiver": "Order recipient",
+            "messageForDealer": "Message for dealer"
+          },
+          "positions":{
+            "downloadbutton": "Download documents"
+          }
+        }
+      },
+      "discounts": {
+        "heading": "Discount table",
+        "customerGroup": "Customer group",
+        "description": {
+          "paragraph_1": {
+            "row_1": "Here you can maintain the discount for the individual customer groups or create new customer groups.",
+            "row_2": "Positive values represent a markup and negative values (entries with -) a discount"
+          },
+          "paragraph_2": {
+            "row_1": "In the field for the RG (discount group) 1–12, you can maintain the relevant discount for non-LU parts.",
+            "row_2": "In the last column \"LU parts\", you can discount the LU parts separately for the contractor customer groups \"LU 1\", \"LU 2\", \"LU 3\"."
+          },
+          "notice": {
+            "row_1": "Note: If you have an interface to your inventory control system (display for prices and availabilities),",
+            "row_2": "this discount table is not relevant for you."
+          }
+        }
+      }
+    },
+    "imprint": {
+        "comm_register": "Commercial register",
+        "contact": "Contact",
+        "directors": "Management",
+        "email": "Email",
+        "internet": "Internet",
+        "phone": "Switchboard",
+        "title": "Legal information"
+    }
+  },
+  "dialog": {
+      "accept": "Yes",
+      "deny": "No",
+      "cancel": "Cancel",
+      "confirmMessage" :"Alle nicht gespeicherten Änderungen gehen verloren wollen Sie wirklich schließen?",
+    "workarea": {
+      "title": "Location selection"
+    },
+    "addressValidation": {
+      "suggested": "Address suggestions:",
+      "original": "Address entered:",
+      "accept": "Save",
+      "deny": "Close",
+      "title": "Meinten Sie vielleicht:"
+    },
+    "registeredCustomers": {
+      "deleteCustomerConfirm": "Kunde wirklich löschen?"
+    },
+    "contactSettings": {
+      "description": "Die Nummer bitte ohne führende 0 und mit der entsprechenden Ländervorwahl eintragen: Format:",
+      "title": "SMS Benachrichtigung"
+    }
+  },
+  "buttons": {
+    "submit": "Send",
+    "accept": "Grant shop release",
+    "deny": "Decline shop release",
+    "deleteCustomer": "Delete customer account",
+    "shopRequest": "Grant shop release",
+    "cancelShop": "Cancel shop release",
+    "notActive": "Not active",
+    "closeWindow": "Close window",
+    "save": "Save",
+    "close": "Close"
+  },
+  "formular": {
+    "error": {
+       "required": "This is a mandatory field",
+       "email": "It must be an e-mail"
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz"
+  },
+  "table": {
+    "search": "Suche"
+  }
+}

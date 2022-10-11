@@ -1,0 +1,250 @@
+{
+  "country": {
+    "placeholder": "Langue",
+    "germany": "Allemand",
+    "denmark": "danois",
+    "unitedKingdom": "anglais",
+    "france": "français",
+    "netherlands": "néerlandais",
+    "poland": "polonais"
+  },
+  "header": {
+    "app_name": "Dealer Cockpit",
+    "logout": "Déconnexion",
+    "main_nav": {
+      "overview": {
+        "label": "Vue d'ensemble",
+        "sub_nav": {}
+      },
+      "customerList": {
+        "label": "Liste des clients"
+      },
+      "requests": {
+        "label": "Gestion des clients"
+      },
+      "customerRegistration": {
+        "label": "Inscription des clients"
+      },
+      "cmanagement": {
+        "label": "Gestion des clients",
+        "sub_nav": {
+          "requests": "Demandes commerciales",
+          "list": "Liste des clients",
+          "registration": "Inscription des clients",
+          "registered": "Clients inscrits"
+        }
+      },
+      "sales": {
+        "label": "Justificatifs"
+      },
+      "settings": {
+        "label": "Paramétrages",
+        "sub_nav": {
+          "general": "Informations générales",
+          "partsshop": "Parts Shop",
+          "discounts": "Tableau de remises"
+        }
+      }
+    }
+  },
+  "content": {
+    "cmanagement": {
+      "register": {
+        "heading": "Inscription",
+        "text_one_star": "* Ces données doivent obligatoirement être saisies",
+        "text_two_stars": "** En acceptant (autorisation) un client, vous confirmez que vous avez accepté et signé les accords de concessionnaires pour l'utilisation de la plateforme en ligne « CLAAS Parts Shop ». Il s'agit d'un accord indispensable entre CLAAS et le partenaire de distribution. Si vous ne l'avez pas encore fait, veuillez demander l'accord à l'adresse partsshop@claas.com et renvoyez-le signé à l'adresse e-mail ci-dessus. Merci beaucoup !",
+        "text_three_stars": "*** Dès que vous avez autorisé le premier client pour la boutique FARM PARTS, un forfait d'utilisation de 19,90€/mois vous sera facturé pour votre site. Ensuite, vous pourrez autoriser gratuitement autant de clients que vous le souhaitez pour votre site. La facture est établie une fois par an, la première facture le mois suivant l'autorisation du premier client. La facturation est effectuée via Granit."
+
+      },
+      "customerList": {
+        "heading": "Aperçu des clients",
+        "tableHeader": {
+          "firstName": "Prénom",
+          "lastName": "Nom",
+          "fullAddress": "Adresse",
+          "fullCity": "CP/localité",
+          "fullName": "Nom",
+          "companyName": "Nom de l'entreprise",
+          "adress": "Adresse",
+          "plz": "CP/localité",
+          "email": "E-mail",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts Shop",
+          "FARMPARTS": "Boutique FARM PARTS",
+          "ACADEMY": "Academy",
+          "SMP": "Boutique EASY",
+          "edit": "Modifier"
+        }
+      },
+      "requests": {
+        "heading": "Demandes commerciales pendantes"
+      },
+      "registeredCustomers": {
+        "heading": "Aperçu des inscriptions",
+        "tableHeader": {
+          "email": "E-mail",
+          "firstname": "Prénom",
+          "lastname": "Nom",
+          "fullName":"Nom",
+          "company":"Nom de l'entreprise",
+          "plz":"CP/localité",
+          "adress":"Adresse",
+          "status": "État",
+          "mailSentDate": "Date d'envoi",
+          "allowEmailSend": "E-mail d'inscription",
+          "allowDeletion": "Supprimer"
+        }
+      },
+      "customerDetails": {
+        "customerData": {
+          "heading": "Informations personnelles"
+        },
+        "shopDetails": {
+          "heading": "Boutiques / applications",
+          "description": "Vous trouverez ici un aperçu des boutiques disponibles pour les clients et de leur état.",
+          "description2": "Modifiez ici également les paramètres clients pour le Parts Shop.",
+          "notice": "Remarque : Pour la boutique FARM PARTS, veuillez passer à la gestion des clients dans FARM PARTS Partner Shop."
+        }
+      }
+    },
+    "settings": {
+      "general": {
+        "headings": {
+          "contactData": {
+            "label": "Coordonnées",
+            "description": "Les données proviennent du système SAP de CLAAS et ne peuvent être modifiées que par CLAAS :"
+          },
+          "contacts": {
+            "label": "Interlocuteur",
+            "description": "Les interlocuteurs suivants sont automatiquement informés par e-mail. Si vous souhaitez également une notification par SMS, veuillez indiquer le numéro de portable correspondant dans la colonne numéro de portable."
+          }
+        },
+        "propertyLabels": {
+          "fullName": "Nom",
+          "street": "Rue, numéro",
+          "locale": "Code postal, ville",
+          "telephone": "Tél.",
+          "fax": "Fax"
+        },
+        "tableHeader": {
+          "active": "Actif",
+          "firstName": "Prénom",
+          "lastName": "Nom",
+          "telephone": "N° de tél. portable",
+          "city": "Localité",
+          "street": "Rue",
+          "zipCode": "Code postal",
+          "email": "E-mail",
+          "telefax": "Fax",
+          "PARTSDOC": "Parts Doc",
+          "ET": "Parts Shop",
+          "FARMPARTS": "Boutique FARM PARTS",
+          "ACADEMY": "Academy",
+          "SMP": "Boutique EASY",
+          "sms": ""
+        },
+        "messageNoActiveShop": "Cet interlocuteur n'a pas de boutique active."
+      },
+      "partsShop": {
+        "tableHeader" : {
+          "id": "Identifiant du site",
+          "description": "Description",
+          "branchText": "Succursale",
+          "delete": "Supprimer le site"
+        }
+      }
+    },
+    "sales":{
+      "sortValues": {
+        "open": "Non traité",
+        "process": "En cours de traitement",
+        "closed": "Terminé"
+      },
+      "orders": {
+        "heading" : "Justificatifs",
+        "description": {
+          "begin": "Détails sur la commande",
+          "end": "Consulter - État"
+        },
+        "details": {
+          "properties": {
+            "statebutton": "Modifier l'état",
+            "deliverer": "Destinataire des produits",
+            "date": "Date",
+            "deliverytype": "Mode d'expédition",
+            "receiver": "Commande du destinataire",
+            "messageForDealer": "Message au concessionnaire"
+          },
+          "positions":{
+            "downloadbutton": "Télécharger le justificatif"
+          }
+        }
+      },
+      "discounts": {
+        "heading": "Tableau de remises",
+        "customerGroup": "Groupe de clients",
+        "description": {
+
+          "paragraph_1": {
+            "row_1": "Ici, vous pouvez mettre à jour les remises des différents groupes de clients, ou créer de nouveaux groupes de clients.",
+            "row_2": "Les chiffres positifs constituent une majoration et les chiffres négatifs (saisie avec -) une remise"
+          },
+          "paragraph_2": {
+            "row_1": "Dans les champs des GR (groupes de remise) 1- 12, vous pouvez mettre à jour les remises pour les pièces non entrepreneurs.",
+            "row_2": "Dans la dernière colonne \"Pièces entrepreneurs\", vous pouvez effectuer séparément des remises pour les groupes de clients entrepreneurs \"LU 1\", \"LU 2\", \"LU 3\"."
+          },
+          "notice": {
+            "row_1": "Remarque : dans la mesure où vous avez une interface avec votre système de gestion des produits (affichage des prix et disponibilités),",
+            "row_2": "ce tableau des remises n'est pas applicable pour vous."
+          }
+        }
+      }
+    },
+    "imprint": {
+        "comm_register": "N° RCS",
+        "contact": "Contact",
+        "directors": "Direction",
+        "email": "E-mail",
+        "internet": "Site Internet",
+        "phone": "Central téléphonique",
+        "title": "Mentions légales"
+    }
+  },
+
+  "footer": {},
+
+  "dialog": {
+      "accept": "Oui",
+      "deny": "Non",
+      "cancel": "Annuler",
+    "workarea": {
+      "title": "Sélection du site"
+    },
+    "addressValidation": {
+      "suggested": "Proposition d'adresse :",
+      "original": "Adresse saisie :",
+      "accept": "Reprendre",
+      "deny": "Fermer"
+    }
+  },
+
+  "buttons": {
+    "submit": "Envoyer",
+    "accept": "Valider la boutique",
+    "deny": "Refuser de valider la boutique",
+    "deleteCustomer": "Supprimer le compte client",
+    "shopRequest": "Valider la boutique",
+    "cancelShop": "Retirer la validation de la boutique",
+    "notActive": "inactif",
+    "closeWindow": "Fermer la fenêtre",
+    "save": "Enregistrer",
+    "close": "Fermer"
+  },
+
+  "formular": {
+    "error": {
+       "required": "Ce champ est obligatoire",
+       "email": "Il faut indiquer un e-mail"
+    }
+  }
+}
