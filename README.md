@@ -1,2 +1,2 @@
 # mergson
-A easy to use CLI based JSON merger
+An easy-to-use CLI for merging JSON files
