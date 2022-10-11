@@ -26,50 +26,69 @@ struct Args {
     #[arg(short, long)]
     input: PathBuf,
     #[arg(short, long)]
-    target: PathBuf,
+    #[clap(required = true)]
+    output: Vec<PathBuf>,
     #[arg(short, long)]
-    output: PathBuf,
+    debug: Option<bool>,
 }
 
 fn main() {
     let args = Args::parse();
-    let input = read_json_file(args.input).unwrap();
-    let mut target = read_json_file(args.target).unwrap();
-    target = merge(input, target).unwrap();
-    write_json_file(args.output, target).unwrap();
+    let input = read_json_file(&args.input).unwrap();
+    println!("Input: '{}'", get_file_name(&args.input));
+    for file in args.output {
+        println!("Merging '{}'...", get_file_name(&file));
+        let mut output = read_json_file(&file).unwrap();
+        output = merge(input.clone(), output, args.debug.unwrap_or_default()).unwrap();
+        write_json_file(&file, output).unwrap();
+        println!("Merged.");
+    }
+    println!("Done.");
 }
 
-fn merge(input: Value, mut target: Value) -> Result<Value> {
+fn merge(input: Value, mut output: Value, debug: bool) -> Result<Value> {
     if input.is_object() {
         let input_object = input.as_object().unwrap();
-        let target_object = target.as_object_mut().unwrap();
+        let output_object = output.as_object_mut().unwrap();
         for key in input_object.keys() {
-            if target_object.contains_key(key) {
-                let value = target_object.get(key).unwrap();
-                target_object.insert(
+            if output_object.contains_key(key) {
+                let value = output_object.get(key).unwrap();
+                output_object.insert(
                     key.clone(),
-                    merge(input_object.get(key).unwrap().clone(), value.clone())?,
+                    merge(input_object.get(key).unwrap().clone(), value.clone(), debug)?,
                 );
+                if debug {
+                    println!("    inserted '{}'", key);
+                }
             }
         }
         for key in input_object.keys() {
-            if !target_object.contains_key(key) {
+            if !output_object.contains_key(key) {
                 let value = input_object.get(key).unwrap();
-                target_object.insert(key.clone(), value.clone());
+                println!("{}", key);
+                output_object.insert(key.clone(), value.clone());
             }
         }
     }
-    Ok(target)
+    Ok(output)
 }
 
-fn read_json_file(path: PathBuf) -> Result<Value> {
+fn read_json_file(path: &PathBuf) -> Result<Value> {
     let raw = fs::read_to_string(path)?;
     let value: Value = serde_json::de::from_str(&raw)?;
     Ok(value)
 }
 
-fn write_json_file(path: PathBuf, json: Value) -> Result<()> {
+fn write_json_file(path: &PathBuf, json: Value) -> Result<()> {
     let raw = serde_json::to_string_pretty(&json)?;
     fs::write(path, &raw)?;
     Ok(())
+}
+
+fn get_file_name(path: &PathBuf) -> String {
+    path.file_name()
+        .unwrap()
+        .to_os_string()
+        .into_string()
+        .unwrap()
 }
