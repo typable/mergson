@@ -1,23 +1,40 @@
-use std::fs;
+#[macro_use]
+extern crate log;
+
 use std::path::PathBuf;
+use std::{fmt, fs};
 
 use clap::Parser;
+use env_logger::Target;
+use log::LevelFilter;
 use serde_json::Value;
 
 type Result<T> = std::result::Result<T, Error>;
 
 #[derive(Debug)]
-struct Error {}
+struct Error {
+    message: String,
+}
+
+impl fmt::Display for Error {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.message)
+    }
+}
 
 impl From<std::io::Error> for Error {
-    fn from(_: std::io::Error) -> Self {
-        Self {}
+    fn from(err: std::io::Error) -> Self {
+        Self {
+            message: err.to_string(),
+        }
     }
 }
 
 impl From<serde_json::Error> for Error {
-    fn from(_: serde_json::Error) -> Self {
-        Self {}
+    fn from(err: serde_json::Error) -> Self {
+        Self {
+            message: err.to_string(),
+        }
     }
 }
 
@@ -28,25 +45,49 @@ struct Args {
     #[arg(short, long)]
     #[clap(required = true)]
     output: Vec<PathBuf>,
-    #[arg(short, long)]
-    debug: Option<bool>,
+    #[arg(long, action)]
+    debug: bool,
 }
 
 fn main() {
     let args = Args::parse();
-    let input = read_json_file(&args.input).unwrap();
-    println!("Input: '{}'", get_file_name(&args.input));
-    for file in args.output {
-        println!("Merging '{}'...", get_file_name(&file));
-        let mut output = read_json_file(&file).unwrap();
-        output = merge(input.clone(), output, args.debug.unwrap_or_default()).unwrap();
-        write_json_file(&file, output).unwrap();
-        println!("Merged.");
+    let mut level = LevelFilter::Info;
+    if args.debug {
+        level = LevelFilter::Debug;
     }
-    println!("Done.");
+    env_logger::builder()
+        .format_timestamp(None)
+        .filter_level(level)
+        .target(Target::Stdout)
+        .init();
+    let input = read_json_file(&args.input).unwrap();
+    info!("Using file '{}' as input", get_file_name(&args.input));
+    let total = args.output.len();
+    let mut passed = 0;
+    for (i, file) in args.output.iter().enumerate() {
+        let file_name = get_file_name(&file);
+        info!("[{}/{}] Merging file '{}'", i + 1, total, &file_name);
+        match merge_file(&input, &file) {
+            Ok(_) => passed += 1,
+            Err(err) => error!("Failed to merge '{}'! Reason: {}", &file_name, err),
+        }
+    }
+    info!(
+        "Merge finished ({} total, {} passed, {} failed)",
+        total,
+        passed,
+        total - passed
+    );
 }
 
-fn merge(input: Value, mut output: Value, debug: bool) -> Result<Value> {
+fn merge_file(input: &Value, path: &PathBuf) -> Result<()> {
+    let mut output = read_json_file(path)?;
+    output = merge(input, output)?;
+    write_json_file(path, output)?;
+    Ok(())
+}
+
+fn merge(input: &Value, mut output: Value) -> Result<Value> {
     if input.is_object() {
         let input_object = input.as_object().unwrap();
         let output_object = output.as_object_mut().unwrap();
@@ -55,11 +96,9 @@ fn merge(input: Value, mut output: Value, debug: bool) -> Result<Value> {
                 let value = output_object.get(key).unwrap();
                 output_object.insert(
                     key.clone(),
-                    merge(input_object.get(key).unwrap().clone(), value.clone(), debug)?,
+                    merge(&input_object.get(key).unwrap(), value.clone())?,
                 );
-                if debug {
-                    println!("    inserted '{}'", key);
-                }
+                debug!("inserted '{}", key);
             }
         }
         for key in input_object.keys() {
