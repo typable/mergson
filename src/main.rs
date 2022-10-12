@@ -1,8 +1,9 @@
 #[macro_use]
 extern crate log;
 
+use std::fmt;
+use std::fs;
 use std::path::PathBuf;
-use std::{fmt, fs};
 
 use clap::Parser;
 use env_logger::Target;
